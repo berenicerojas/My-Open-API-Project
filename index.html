@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width= device-width, initial-scale = 1.0">
+    <title> Open API Project</title>
+    <link rel = "stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+
+        <div id = "location-input-container">
+            <input type = "text" id = "location-input" placeholder="Enter City (e.g., London)" value="London">
+            <button id="search-button"> Search </button>
+        </div>
+
+        <nav id = "data-nav">
+            <button id = "current-btn" class="active"> Current</button>
+            <button id=" forecast-btn"> 5-Day Forecast</button>
+        </nav>
+    </header>
+
+    <main id="weather-container">
+        <section id = "current-weather" class = "data-view">
+            <h2> Current Conditions</h2>
+            <div id = "current-card">
+            </div>
+        </section>
+
+        <section id = "forecast-view" class="data-view hidden">
+            <h2> 5-Day Forecast</h2>
+            <ul id = "forecast-list">
+            </ul>
+        </section>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
+

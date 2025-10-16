@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+    padding: 1.25rem;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 1.25rem;
+    width: 100%;
+    max-width: 37.5rem;
+}
+
+h1{
+    color: #007bff;
+    margin-bottom: 0.625rem;
+}
+
+#location-input-container{
+    margin-bottom: .938rem;
+}
+
+#location-input, #search-button{
+    padding: .5rem;
+    border-radius: .25rem;
+    border: 0.063rem solid #ccc;
+}
+
+
+#data-nav button{
+    padding: .625rem .9375rem;
+    margin: 0 0.3125;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: .3125rem;
+    transition: background-color .2s;
+}
+
+#data-nav button.active{
+    background-color: #007bff;
+    color: white;
+}
+
+.data-view{
+    padding: 1.25rem;
+    border-radius: .5rem;
+    background-color: white;
+    box-shadow: .25rem .5rem rgba(0,0,0,.1, green, blue, alpha);
+    width: 100%;
+    max-width: 37.5rem;
+    margin-top: .9375rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#current-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.temp-value{
+    font-size: 5rem;
+    font-weight: bold;
+    color: #333;
+    margin: .3125rem 0;
+}
+
+#forecast-list{
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-around;
+    gap: .625rem;
+    flex-wrap: wrap;
+}
+
+#forecast-list li{
+    flex: 1 1 9.375rem;
+    padding: .9735rem .3125rem;
+    background-color: #e9f5ff;
+    border: .0625rem solid #cceeff;
+    border-radius: 0.375rem;
+    text-align: center;
+    margin-bottom: 0.625rem;
+}
