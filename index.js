@@ -12,9 +12,9 @@ let currentCityName = '';
 
 function getWeatherIcon(code){
   if (code <= 3) return 'Sunny';
-  if (code >= 4 && <= 48) return 'Cloudy';
-  if (code >= 51 && <= 67) return 'Rainy';
-  if (code >= 71 && <= 99) return 'Snow/Thunder';
+  if (code >= 4 && code <= 48) return 'Cloudy';
+  if (code >= 51 && code <= 67) return 'Rainy';
+  if (code >= 71 && code <= 99) return 'Snow/Thunder';
   return 'Not sure'
 }
 
@@ -96,7 +96,7 @@ function renderForecast(data){
 
 function toggleView(viewName){
   currentBtn.classList.toggle('active', viewName === 'current');
-  forecastBtn.classList.toggle('active', viewName !=== 'forecast');
+  forecastBtn.classList.toggle('active', viewName !== 'forecast');
 
   currentWeatherView.classList.toggle('hidden', viewName !== 'current');
   forecastView.classList.toggle('hidden', viewName !== 'forecast');
