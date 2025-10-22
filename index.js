@@ -18,7 +18,7 @@ function getWeatherIcon(code){
   return 'Not sure'
 }
 
-async function getCoordinates (city){
+async function getCoordinates(city){
   const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`;
   try {
     const response = await fetch (geoUrl);
@@ -75,7 +75,7 @@ function renderForecast(data){
 
   const days = data.daily.time.slice(1,6);
   const tempsMax = data.daily.temperature_2m_max.slice(1,6);
-  const tempsMin = data.daily.temperature_2m_mic.slice(1,6);
+  const tempsMin = data.daily.temperature_2m_min.slice(1,6);
   const codes = data.daily.weathercode.slice(1,6);
 
   for (let i = 0; i< days.length; i++){
@@ -103,7 +103,7 @@ function toggleView(viewName){
 }
 
 async function handlesearch() {
-  const city = locationInput.ariaValueMax.trim();
+  const city = locationInput.value.trim();
   if (!city) return;
 
   const coords = await getCoordinates(city);
